@@ -13,6 +13,11 @@ ips
     hdpslaver2  : 192.168.15.10
 
 
+# caso tenha esqucido de conigura o hostname
+
+    cmd: hostnamectl
+    cmd: hostnamectl set-hostname "onovohostname"
+    cmd: vi /etc/hostname
 
 #Para caso nao consiga se conectar altere as conexao da rede da sua maquina virtual, estando ela desligada; indo em:
     configuraçoes
