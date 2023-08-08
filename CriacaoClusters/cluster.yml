@@ -1,0 +1,54 @@
+cluster
+
+
+#Conectando o cluster para caso ambiente linux/macos
+    cmd: ssh usuario@ipadress
+     ex: ssh root@198.168.1.1
+
+#Conectando o cluster para caso ambiente windows
+ips
+    cmdÇ ip addr show
+    hpdmaster   : 192.168.15.8
+    hdpslaver1  : 192.168.15.9
+    hdpslaver2  : 192.168.15.11/24
+
+
+
+#Para caso nao consiga se conectar altere as conexao da rede da sua maquina virtual, estando ela desligada; indo em:
+    configuraçoes
+        rede:
+            selecione: Habilitar placa de rede
+            conecatado a: placa em modo bridge
+            clique em avançado:
+                tipo de placa: caso use processador amd troque para PCnet - FAST III(Am79C970A)
+                modo promiscuo: permitir VMs
+                endereco mac : o Oracle vm irá gerar um pra voce
+#verifique o ip da maquina
+
+    cmd: ip addr show
+        
+Após isso;
+
+verficar se o sshd status funciona de duas formas, esta e a abaixo, na forma abaixo voce faz usando previlegio de adm
+        cmd: service sshd status 
+
+    Verifique se o serviço SSH (sshd) está em execução: Verifique se o serviço SSH está de fato em execução na máquina virtual CentOS. Para fazer isso, use o seguinte comando no terminal da máquina virtual:
+
+        cmd: sudo systemctl status sshd
+    Se o serviço não estiver em execução, inicie-o com:
+        cmd: sudo systemctl start sshd
+
+Verifique as configurações de firewall: Se o firewall estiver ativado na máquina virtual CentOS, verifique se ele permite conexões SSH (porta 22). Para verificar as regras de firewall, use:
+    cmd: sudo firewall-cmd --list-all
+Se não houver uma regra permitindo o tráfego SSH, você pode adicionar a regra usando::
+    cmd: sudo firewall-cmd --add-service=ssh --permanent
+    cmd: sudo firewall-cmd --reload
+
+Verifique também
+    Verifique a porta do SSH: Por padrão, o SSH usa a porta 22. Verifique se o serviço SSH está configurado para escutar na porta correta. Para verificar a porta configurada, abra o arquivo de configuração SSH:
+
+        cmd: sudo nano /etc/ssh/sshd_config
+        Verifique se a porta está definida como 22 (Port 22).
+
+
+
