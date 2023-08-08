@@ -13,6 +13,8 @@ tar -xvf hadoop-3.1.0.tar.gz
 
 # Muda o proprietário
 chown -R hadoop /opt/hadoop
+chown -R hadoop /hadoop
+
 
 
 # Testando a instalação
