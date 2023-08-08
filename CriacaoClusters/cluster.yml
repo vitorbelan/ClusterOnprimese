@@ -10,7 +10,7 @@ ips
     cmdÇ ip addr show
     hpdmaster   : 192.168.15.8
     hdpslaver1  : 192.168.15.9
-    hdpslaver2  : 192.168.15.11/24
+    hdpslaver2  : 192.168.15.10
 
 
 
