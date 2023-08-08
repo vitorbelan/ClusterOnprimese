@@ -1,0 +1,65 @@
+Instalando Java
+
+configurando o arquivo host
+    o que é arquivo host: arquivo que diz para a maquina onde ela encontra o nome converte o ip para um nome
+    cmd: vi /etc/hosts 
+        exemplo: acrescente as duas linhas abaixo no exemplo IP isso para cada nó que nao seja o próprio nó
+        127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+        ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+        192.168.15.8 hdpmaster
+        192.168.15.11 hdpslv2
+    cmd : ping hdpslv1q
+
+
+
+Ç
+agora instalando o java
+    cmd: cd /opt/ : diretorio onde vamos salvar alguns softwares
+
+    Instalação Data Lake
+    Instalando e Configurando o Java JDK (nos 3 servidores do cluster)
+    Acessa o diretório
+        cmd: cd /opt/
+    Instala o wget
+        cmd: yum install wget
+
+        Faz o download
+        wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz"
+
+        link att
+        wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "https://download.oracle.com/java/20/latest/jdk-20_linux-aarch64_bin.tar.gz"
+
+        wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.tar.gz"
+
+        #dependendo da versao so SO no meu caso só funcionou nesse
+        cmd: wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "https://download.java.net/openjdk/jdk18/ri/openjdk-18+36_linux-x64_bin.tar.gz"
+
+        
+        cdcd
+
+        Descompacta o arquivo
+        cmd: tar xzf jdk-8u171-linux-x64.tar.gz
+
+        renomeia o arqv para a pasta
+        cmd: mv jdk-20.0.2/ jdk
+        Verifica a versão
+        cmd: java -version
+
+        Configurando as variáveis de ambiente
+        
+        va para home:
+        cmd: cd~
+
+        cmd: vi .bash_profile
+
+        #Java JDK 2.0
+        export JAVA_HOME=/opt/jdk
+        export JRE_HOME=/opt/jdk/jre
+        export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+
+        cmd: source .bash_profile
+
+        cmd: java -version
+
+        vim -r .bash_profile
+        
