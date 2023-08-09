@@ -65,6 +65,13 @@ ips
         DNS1 = 192.168.15.1
         DNS2 = fe80::920a:62ff:fe19:c340
 
+                master
+        IPADDR  =192.168.15.10
+        NETMASK =192.168.15.10/24
+        GATEWAY=192.168.15.1
+        DNS1 = 192.168.15.1
+        DNS2 = fe80::920a:62ff:fe19:c340
+
 
         sudo systemctl restart network
         sudo reboot
