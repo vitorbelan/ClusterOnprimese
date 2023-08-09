@@ -31,6 +31,17 @@ ips
 #verifique o ip da maquina
 
     cmd: ip addr show
+
+        PARA IDENTIFICAR O SERVIDOR DNS
+        cmd: sudo vi /etc/sysconfig/network-scripts/ifcfg-
+        
+        IDENTIFICAR O IP 
+        cmd: ip addr show
+        
+        IPADDR  =192.168.1.10
+        NETMASK =255.255.255.0
+        DNS1 = 192.168.154.1
+        DNS2 = fe80::920a:62ff:fe19:c340
         
 Após isso;
 

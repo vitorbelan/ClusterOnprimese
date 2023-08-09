@@ -39,3 +39,14 @@ export PATH=$PATH:$HADOOP_HOME/bin
 
 source .bash_profile
 
+
+
+PARA IDENTIFICAR O SERVIDOR DNS
+sudo vi /etc/sysconfig/network-scripts/ifcfg-
+
+IDENTIFICAR O IP IPADDR SHOW
+
+IPADDR  =192.168.1.10
+NETMASK =255.255.255.0
+DNS1 = 192.168.154.1
+DNS2 = fe80::920a:62ff:fe19:c340
