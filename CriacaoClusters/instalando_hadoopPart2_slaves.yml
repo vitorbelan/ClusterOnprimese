@@ -4,14 +4,20 @@
 
 # Como root, executar o comando abaixo em cada Slave:
 
-mkdir /opt/hadoop
-cd /opt
-chown -R hadoop:hadoop hadoop/
+    cmd: mkdir /opt/hadoop
+    cmd: cd /opt
+    cmd: chown -R hadoop:hadoop hadoop/
 
 
 # Execute o comando abaixo como usuário hadoop no Node Master para instalar o Hadoop (copiar os arquivos) para o Slave:
 
-su - hadoop
-cd ~
-scp -rv -i "~/.ssh/hdp-key" /opt/hadoop  hadoop@hdpslv1:/opt
-scp -rv -i "~/.ssh/hdp-key" /opt/hadoop  hadoop@hdpslv2:/opt
+    cmd: su - hadoop
+    cmd: cd ~
+    cmd: scp -rv -i "~/.ssh/hdp-key" /opt/hadoop  hadoop@hdpslv1:/opt
+    cmd: scp -rv -i "~/.ssh/hdp-key" /opt/hadoop  hadoop@hdpslv2:/opt
+
+    # dando exit satus 0 significa que a transferencia foi feita corretamente
+
+# para validar a copia entre no diretorio hadoop no slave2
+    cmd: cd /hadoop
+    cmd: cd etc/hadoop
