@@ -8,7 +8,7 @@
     #indo pro diretorio lembrar de fazer isso no usuario hadoop
     # mudar usando: cmd: su - hadoop
     cmd: cd $HADOOP_HOME/etc/hadoop
-    cmd: vi hadoo-env.sh
+    cmd: vi hadoop-env.sh
 
     export HADOOP_CONF_DIR="${HADOOP_HOME}/etc/hadoop"
     export PATH="${PATH}:${HADOOP_HOME}/bin"

@@ -14,3 +14,5 @@
 
     cmd: cd /opt/hadoop/etc/hadoop
     cmd: vi hadoop-env.sh
+
+    cmd: jps # visualiza tudo que foi inicialiado
