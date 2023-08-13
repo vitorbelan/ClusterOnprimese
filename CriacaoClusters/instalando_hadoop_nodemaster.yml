@@ -41,3 +41,5 @@ export HADOOP_HOME=/opt/hadoop
 export PATH=$PATH:$HADOOP_HOME/bin
     
     source .bash_profile
+
+    cmd: hadoop version # para verificar de qualquer lugar
