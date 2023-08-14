@@ -5,11 +5,11 @@
 # Acessar via browser (se tiver problema ao conectar, verifique o firewall do servidor:  e pare o serviço assim:
     cmd: service firewalld status
     cmd: service firewalld stop
-    
+    cmd: sudo systemctl disable firewalld
 # Iniciar o HDFS (trouleshooting do problema com o Java)
 
     cmd: $HADOOP_HOME/sbin/start-dfs.sh
-
+    cmd: $HADOOP_HOME/sbin/stop-all.sh # para finalizar
 
 # Acesso ao cluster via browser:
 
