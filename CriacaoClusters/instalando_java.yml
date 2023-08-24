@@ -6,8 +6,8 @@ configurando o arquivo host
         exemplo: acrescente as duas linhas abaixo no exemplo IP isso para cada nó que nao seja o próprio nó
         127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
         ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-        192.168.15.8 hdpmaster
-        192.168.15.11 hdpslv2
+        ip_do_masterhdpmaster
+        ip_do_slave hdpslv2
     cmd : ping hdpslv1q
 
 
