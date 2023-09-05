@@ -1,0 +1,27 @@
+O que é streaming de dados?:
+    Dado gerados continuamente por milhares de fontes de dados, que geralmente enviam os registros de daods simultaneamente em tamanho pequenos na ordem de kilobytes
+
+    Ex:
+        - Dados gerados por plataformas em redes sociais
+        - Dados de arquivos de log de servidores
+        - Dados gerados pelo comportamento do usuário
+        - Dados de sensores e plataformas IoT
+
+    O que fazer? :
+        - Identificar as fontes de streaming de dados das quais queremos trabalhar
+        - Definir um sistema de coleta e processamento dos dados de streaming
+        - E definir como armazenar
+
+    Principais Caracteristicas:
+        - Confiabilidade ;
+        - Escalabilidade ;
+        - Gestao         ; 
+        - Extensibilidade;
+
+    Arquitetura Flume:
+        - Source; responsável por ouvir o streamin de dados
+        - Chanel; "lugar" onde os eventos sao armazenaods até que sejam consumidos
+        - Sink  ; Responsável por consumir osveooooooooooooooo
+        3 diferentes de topolias
+
+        aula 147
