@@ -1,0 +1,39 @@
+NiFi:
+
+    Suporta roteamente de dados como grafos direcionados de forma escalavel e simples para movimentacao e transformaçao de dados
+        roteamento: fluxo de dados;
+        grafos direcionados: uma soluçao de ETL
+
+    Principais Caracteristicas:
+        - permiete automatizar o fluxo de dados entre sistemas
+        - interface drag and drop
+        - fono na configuraçao dos "Processores"
+        - Escalável em um cluster de computadores
+        - Entrega garantida de dados
+
+    Quando usar o NiFi:
+        - Necessiade de um sitema seguro para transferencia de dados entre sistemas
+        - Entrega de dados da fonte para plataformas analíticas
+        - Processamento e transformação de dados durante a movimentação (conversão, parsing, limpeza, etc...)
+
+    Quando não usar o Nifi:
+        - Quando precisar de computação distribuída (nesse caso usar o Apache Spark)
+        - Processamento complexo de enventos (nesse caso uso o Kafka/Flume/Flink)
+        - Operações de agregações e joins (nesse caso usar o Sqoop)
+
+Componentes do NiFi:
+    FlowFile:
+        - São os dados
+        - Dividos em 2 partes
+            - Dados que queremos processar
+            - Atributos formados por pares de chave-valor(dt criação etc)
+        - Persistidos em disco
+
+    Processor:
+        - Aplica transformações e regras aos FlowFiles para gerar novos FlowFiles
+        - Qualquer Processor pode processar qualquer FlowFile
+        - Processors sao executados em paralelo
+
+    Conector:
+        - Fila de FlowFiles que serão processados
+        - Define regras e como os FlowFiles serão priorizados
