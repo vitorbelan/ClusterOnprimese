@@ -2,3 +2,17 @@ Kafka:
 
     Principal objetivo do datalake:
         - Trata grandes conjuntos de dados estruturados ou nao em batch ou streaming
+
+    Camada de mensagens:
+        - Capacidade de dissociar a origem (produtor) e o destino (consumidor)
+        - Capacidade de manipular mensagens de alta velocidade na ordem de centenas MBytes por segundo a cada nó do servidor de app
+        - Capacidade de lidar com graandes volumes de dados da ordem de terabytes
+        - Capacidade de lidar com mensagens com latênica muito baixa sob requisitos extremos de taxa de transferencia
+        - Capacidade de garantir a entrega de mensagens (durabilidade) de forma ordenada
+        - Capacidade de fornecer a mesma mensagem a vários consumidores
+        - Capacidade de análise de dados para derivar estatisticas operacionais
+        - Capacidade de agregar dados provenientes de várias fontes e fazer algumas análises
+        - Capacidade de alto desempenho com menos requisitos de hardware
+        - Capacidade de executar recursos míminos de enriquecimentos e transformação
+
+    VIDEO 190
