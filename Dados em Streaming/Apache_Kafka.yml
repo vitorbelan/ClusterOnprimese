@@ -49,3 +49,8 @@ Apache Kafka Cluster:
         -Sistemas distribuidos; coleçao de recursos que possuem um objetivo ou funçao especifico, consistem de multiplos nodes ou workes e
         requer coordenaçao para garantir consistencia e progresso par ao objetivo comum, cada node se comunica com os outros nodes através
         de mensagens.
+
+        - Serviço centralizado para manter metadados sobre o cluster de nodes distribuidos, ou seja, gerencias um sistema distribuido
+        - É um sistema distribuído por sí próprio constituindo multiplos nodes
+
+    
