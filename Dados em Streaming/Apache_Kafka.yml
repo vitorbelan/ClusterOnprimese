@@ -15,4 +15,37 @@ Kafka:
         - Capacidade de alto desempenho com menos requisitos de hardware
         - Capacidade de executar recursos míminos de enriquecimentos e transformação
 
-    VIDEO 190
+
+Oque é? :
+
+        - Foi desenvolvido no linkedin
+        - É uma plataforma opensource de processamento de streaming de dados, escrita em Scala e Java. O projeyo tem como objetivo fornecer uma plataforma
+        - unificada de alta produtividade de baixa latëncia pra o tratamento de feeds dedados em tempo real.
+        - Sua camada de armazenamento é essencialmente uma dila de mensagens massivamente esclável arquitetada como um log de transações distribuidas, tornando altamente valioso para infra corporativas de processamento e straming de dados.
+        - É um MOM - Midleware Orientado a Mensagens, que suporta o envio e recebimento de mensagens entre sistemas distribuídos. 
+        - Conecta sua fonte de dados com seu destino. E nao precisa necessariamente trabalhar só com streaming.
+
+Arquitetura:
+    Producers:
+         - os que vao publicar um serviço
+         - precisa ter previlégio para enviar dados para o topics
+    Consumers:
+         - os que vao receber dados
+         - precisam ter uma especie de "assinatura" um subscrição nos tópicos
+    Topics:
+         - um conjunto de mensagens do mesmo tipo
+    Broker:
+         - Controla os topics 
+
+Apache Kafka Cluster:
+
+    É possível construir um cluster kafka caso trablhe com muitissimos dados; petabytes no caso
+    Ele basicamente distribui o broker em várias máquinas, ou até mesmo 2 ou mais em uma mesma máquina
+    O número do broker define o tamanho do cluster, nao necessariamente a qtd de máquinas.
+    Apache ZOOKEEPER: é quem gerencia um cluster kafka
+    Resumidamente: é um conjunto de brokers que podem rodar ou nao na mesma máquina gerenciados pelo zookeeper
+
+    Apache ZooKeeper:
+        -Sistemas distribuidos; coleçao de recursos que possuem um objetivo ou funçao especifico, consistem de multiplos nodes ou workes e
+        requer coordenaçao para garantir consistencia e progresso par ao objetivo comum, cada node se comunica com os outros nodes através
+        de mensagens.
