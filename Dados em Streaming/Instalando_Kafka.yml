@@ -1,3 +1,33 @@
 Instalação: 
     - Instalaçao no driver/nodemaster
     - O ideal seria ter outra máquina somente para o kafka
+    
+Download:
+    - kafka.apache.org/downloads 
+    cmd:
+        cd /opt
+        sudo wget https://archive.apache.org/dist/kafka/2.1.0/kafka_2.11-2.1.0.tgz
+        sudo tar -xvf kafka_2.11
+        sudo mv kafka_2.11 kafka
+        sudo rm -rf kafka_2.11
+        sudo chown -R hadoop:hadoop kafka/
+        vi .bash_profile
+            {incluir no bash}
+
+            #kafka
+            export KAFKA_HOME =/opt/kafka
+            export PATH=$PATH:$KAFKA_HOME/bin
+        source .bash_profile
+
+    diretorio libs dentro da pasta dp kafka para ver zookeeper;
+
+        cmd: cd libs/
+    diretorio config para arquvios de propriedades;
+
+        cmd: cd config/
+            vi zookeerper.properties
+            vi consumer.properties
+            vi server.properties
+
+    diretorio de binarios;
+        cmd: cd bin/
