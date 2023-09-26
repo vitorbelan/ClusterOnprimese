@@ -31,3 +31,32 @@ Download:
 
     diretorio de binarios;
         cmd: cd bin/
+
+
+Inicializando um kluster kafka
+
+    inicializando o apache zookeeper
+    cmd: cd /opt/kafka/                                            {navegue até o diretorio}
+         bin/zookeeper-server-start.sh config/zookeeper.properties {iniciando o zookeper} --obs; "diretorio do zookeper" "diretorio do arquivo de parametro"
+         sudo yum install telnet                                   {testando se o serviço esta online, lembrar de remover o telnet}
+         telnet localhost 2181                                     {conectado na porta que mostra depois que inicializa o zookeeper }
+         stat
+
+Iniciando o broker
+
+    cmd: cd /opt/kafka/                                            {navegue até o diretorio}
+         bin/kafka-server-start.sh config/server.properties        {iniciando 1 broker config padrão do kafka} --obs; "diretorio do zookeper" "diretorio do arquivo de parametro"
+
+Criando um topico 
+
+    cmd: cd /opt/kafka/                                            {navegue até o diretorio}
+         bin/kafka-topics.sh --create --topic topico1 --zookeeper localhost:2181 --replication-factor 1 --partitions 1     
+                                                                   {--create --topic "nome do topico"}
+         bin/kafka-topics.sh --list --zookeeper localhost:2181     {verificando nomes dos topicos criados}
+
+Produzinho mensagens de um topico
+
+    cmd: 
+        bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topico1
+
+205
