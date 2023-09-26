@@ -33,9 +33,34 @@ Arquitetura:
          - os que vao receber dados
          - precisam ter uma especie de "assinatura" um subscrição nos tópicos
     Topics:
-         - um conjunto de mensagens do mesmo tipo
+         - um conjunto/grupo de mensagens do mesmo tipo
+         - uma categoria de mensagens
+         - abstração central do kafka
+         - entidade lógica, fisicamente representada por um arquivo de log  
+         o que tenho dentro do tópico
+            -uma sequencia de mensagens, onde o tópiccco ordena as mensagens enviadas pelo producer
+            eventing sourcing nome da arquitetura em que ordena as mudanças como um sequncia de eventos imutavies ordenados pelo tempo
+
+            mensagens (apache kafka message):
+                - cada mensagem contem;
+                    - um timestamp
+                    - um ID, um identificador unico
+                    - dados--> chamados de payloads
+            offset (controla as mensagens que ja foram lidas):
+                - placeholder; um espaço reservado
+                - guarda a posição da ultima mensagem lida
+                - mantido pelo Kafka Cosumer
+                - corresponde ao identiicador da mensagem
+
+            politica de rentenção:
+                - retem todas mensagens publicadas independentemente do consumo
+                - período de retenção é configurável e padrão é de 168 horas (7 dias).
+                - período de retenção é definido por tópico
+                - considerar restrições de respaço em disco ao definir a política de retenção  
+
     Broker:
          - Controla os topics 
+
 
 Apache Kafka Cluster:
 
