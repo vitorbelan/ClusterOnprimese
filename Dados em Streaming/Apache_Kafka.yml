@@ -78,4 +78,24 @@ Apache Kafka Cluster:
         - Serviço centralizado para manter metadados sobre o cluster de nodes distribuidos, ou seja, gerencias um sistema distribuido
         - É um sistema distribuído por sí próprio constituindo multiplos nodes
 
-    
+Commit Logs:
+    - Registro de transações
+    - Fisicamente armazenados e mantidos
+    - Fonte de confiança nos dados
+    - Ponto de recuperação
+    - Bsse para replicação e distribuição
+
+    Apache kafka é um servicó de mensagens do tipo publicação/subscrição repensado como um distributed commit log.
+
+Partições no Apache Kafka:
+
+    - Um tópico é represemtadp [pr uim ou mais arquivo de log, esses arquivos são chamdos de partições.
+    - Cada tópico tem uma ou mais partições e é configurável
+    - Uma partição é a base do kafka para conseguir;
+        - Escalabilidade
+        - Tolerancia a falhas
+    - Cada partição é mantida em um ou mais brokes
+    - Cada partição tem sua própria pasta dentro do diretório de logs do kafka
+        ex;; /tmp/kafka-logs/{topic}-{partition}
+                               "my_topic-0"
+    - Em geral a escalabilidade do kafka é determinada pelo número de partições sendo gerenciado por múltiplos Brokers
