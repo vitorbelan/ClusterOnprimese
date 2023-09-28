@@ -50,4 +50,8 @@ Configurando um multibroker:
 
         cmd: cd /opt/kafka/                                            {navegue até o diretorio}
             bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic topico2 --from-beginning
-          
+
+ verififcando se o processo está em execucao
+    cmd: 
+        ps aux | grep server-0.properties
+        kill -9 4002 {4002 é o ID de processo no linux} além do kill poderia usar o cmd; Ctrl+Z
