@@ -185,3 +185,5 @@ Big Data Tools and Ecosystem
                     é o system file que grava e gerencia os arquivos Big Data
                 yet Another Resource Negotiator (YARN)
                     é o gerenciador de recurso que vem com o Haddop e é o gerenciador de recursos padrao para muitas aplicacóes de Big Data como Hive e Spark
+
+

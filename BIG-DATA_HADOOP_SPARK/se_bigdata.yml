@@ -1,0 +1,31 @@
+# Introducao ao Haddop
+    Haddop:
+    Uma estrutura de código aberto para bigdata, com os principais componentes: YARN, MapReduce, Hive, HDFS, Hadoop Commom    
+        Como Hadoop trabalha:
+        HDFS:
+            Lida e armazena grande quantidade de dados
+            Escala um unico cluster para milhares
+        MapReduce:
+            Conhecido como Haddop processing unit
+            Processo dados de Big Data quebrando em dados menores
+            Primeiro método usado para consultar dados armazenados no HDFS
+        YARN:
+            Yet Another Resource Negotiator
+            Prepara a RAM e o CPU para o haddop executar os dados em batch, stream, interativo e gráfico
+
+MapReduce:
+    O que é:
+        Um programa que permite escalabilidade massiva em centenas de milhares de servidores em um haddop cluster
+        Técnicas de processamento para computaçao distribídas
+        Consiste de uma tarefa de map e reduce
+        Pode ser codado em Java,C ++, Pyrhon, Ruby e R
+    Framework:
+        Input File --> 
+        Map; Executa tarefas de mapeamento extraindo informaçoes de dados -->
+        Reduce; funciona com varias funções de map e agrega os conjuntos de dados a partir de uma mesma chave
+    How MapReduce works:
+    Why Map Reduce
+        Computacao paralela
+
+Haddop Ecosystem:
+    
