@@ -28,4 +28,25 @@ MapReduce:
         Computacao paralela
 
 Haddop Ecosystem:
-    
+    Hbase:
+        nao relacional databse
+        permite manuseio do dado em tempo real
+        armazena dado
+    Cassandra:
+        banco de dados NoSQL, escalável projetado ara nao ter um ponto unico de falha
+    Pig:
+        Analiza grande quantidade de dados
+        Opera order do cliente
+        Linguagem pro data flow que segue ordem e conjunto de comandaos
+    Hive:
+        Criado para gerar relatórios e opera no servidor de um cluster
+        Linguagem de programação declarativa onde o usuario declara os dados e tipos que deseja receber
+    Acces Data
+    Impala:
+        Escalavel e uma plataforma dácil de usar para todos
+    Hue:
+        Permite upar, baixar, browse e query de dados
+        Permite executar Pig Apache jobs 
+        Fornece um SQL para varias linguagens de consulta
+
+HDFS:
