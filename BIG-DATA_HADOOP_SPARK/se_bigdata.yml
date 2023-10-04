@@ -50,3 +50,23 @@ Haddop Ecosystem:
         Fornece um SQL para varias linguagens de consulta
 
 HDFS:
+    Sistema de arquivos distribuídos em vários servidores de arquivos, que permidere acessar em qualquer servidor
+    Camada de armazenamento do Haddop
+    Quebra os arquivos em blocos cria réplicas dos blocos e armazena em diferentes máquinas.
+    Prove acesso a stream de dados sem problemas
+Principais beneficios
+    Armazenado de hardwate nao é caro; a camada de armazenamento não é cara
+    grande quantidade de dados; pode armazenar petabytes de dados
+    replicação; cópias dos dados em multiplas máquinas
+    Tolerante a falha; se uma máquina quebra, uma cópia dos dados pode ser encontrado em outra máquina
+    Altamente escalável
+    Portatil; pode ser movido através de multiplas plataformas
+
+Conceitos
+    Blocks
+        Os arquivos sao dividios em parters menores chamadas blocos
+        Qtd minima de dados que pode ser lida ou escrita a prova de falhas
+        O tamanho padrão dos arquivos está entre 64 e 128mb
+    Nós:
+        Sistema unico (maquina) responsavel por processar e armazenas os dados
+        Primary node
