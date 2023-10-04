@@ -68,5 +68,13 @@ Conceitos
         Qtd minima de dados que pode ser lida ou escrita a prova de falhas
         O tamanho padrão dos arquivos está entre 64 e 128mb
     Nós:
-        Sistema unico (maquina) responsavel por processar e armazenas os dados
-        Primary node
+        Sistema unico (maquina) responsavel por processar e armazenar os dados
+        Primary node; REGULA O ACESSO aos arquivos, mantém, gerencia e atribui tarefar ao secondary node(data node)
+        Secundary node; realizam solicitaçoes de leitura e gravaçõ seguindo instruçoes do primary node
+        Rack awareness; escolhe os racks de nós mais próximos uns aos outros, melhora performance reduzindo trafico na rede, name node mantem o rack ID information
+    Replication:
+        Reconhecimento de rack para criar réplicas para garantir que os dados sejam confiáveis
+        Cria uma copia do block de dados com proposito de backup
+        Fator de replicação; numero de vezes que o block de dados foi copiado
+    Read and Write Operations
+        Write once read many
