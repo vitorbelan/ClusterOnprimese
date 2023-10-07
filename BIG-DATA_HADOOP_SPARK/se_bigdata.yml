@@ -78,3 +78,38 @@ Conceitos
         Fator de replicação; numero de vezes que o block de dados foi copiado
     Read and Write Operations
         Write once read many
+
+HIVE:
+    É um software de data warehouse dentro do haddop capaz de ler, escrever e manipular dados do tipo tabular (datasets)
+        é escalavel,
+        Parecido com SQL, Hive Query Language (HiveQL) baseada no SQL
+
+    Principais diferenças entre o Hive e um RDBMS:
+        # HIVE
+            Escreve uma vez le varias vezes, gerencia petabytes de dados, nao obriga o schema paara carregas dados, suporta particionamento
+        # Tradicional RDBMS
+            Escreve varias e le variaz vezes, gerencia megabytes, obriga o schema para carregar dados, geralmente nao suporta particionamento
+
+    Arquitetura:
+        Hive Clients
+            JBDC/OBDC drivers, dependendo da aplicaçao pode ser algo baseado em java ou ODBC
+        Hive Service
+            Web Interface com o usuário, Hive server e linha de comando geram tarefas para o driver, que otimmiza(divide as tarefas eficientemente), planeja, executa os comandos de entrada do usuário, geralmente querys, e armazena no metastore informaçoes sobre as tabelas 
+        Hive Storage and Computing
+            Armazena quando solicitado pelo driver no database ou no Hadoop Cluster
+
+HBase:
+    Sistema de gerenciamento de um database nao relacional orientado a coluna, rodando sobre o HDFS, roda bem com dados em tempo real, preve uma tolerancia a falha. usado para aplicaçoes com muita gravações para armazenar grande quantidade de dados e gerar analises. Fornece um suporte de backup para as atividades do MapReduce, não tem colunas fixas sendo definido apenas por familias de colunas. Fornece uma API em java para se acessado. Fornece réplicas entre os clusters
+        Tem um schema de colunas predefinido mas nao fixo, podendo ser alterado. O master node gerencia os cluster  e as regioes para executar os workers
+
+    Diferencas entre Hbase e HDFS
+        #HBase
+            Armazenas dados em forma tabular
+            Permite mudancas 
+            Permite varias leituras e gravaçoes armazenadas no HDFS
+            Permite armazenamento e processamento
+        #HDFS   
+            Armazena dasdos distribuidos
+            arquitetura rigida
+            É ajustado para escrever uma única vez e ler várias vezes
+            Premiete somente armazenamento
