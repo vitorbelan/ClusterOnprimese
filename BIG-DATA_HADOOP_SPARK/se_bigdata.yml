@@ -69,7 +69,7 @@ Conceitos
         O tamanho padrão dos arquivos está entre 64 e 128mb
     Nós:
         Sistema unico (maquina) responsavel por processar e armazenar os dados
-        Primary node; REGULA O ACESSO aos arquivos, mantém, gerencia e atribui tarefar ao secondary node(data node)
+        Primary node; REGULA O ACESSO aos arquivos, mantém, gerencia e atribui tarefas ao secondary node(data node)
         Secundary node; realizam solicitaçoes de leitura e gravaçõ seguindo instruçoes do primary node
         Rack awareness; escolhe os racks de nós mais próximos uns aos outros, melhora performance reduzindo trafico na rede, name node mantem o rack ID information
     Replication:
@@ -113,3 +113,88 @@ HBase:
             arquitetura rigida
             É ajustado para escrever uma única vez e ler várias vezes
             Premiete somente armazenamento
+
+Hands-on lab on Hadoop Map-Reduce (20 mins):
+
+    1 - Download hadoop-3.2.3.tar.gz to your theia environment by running the following command. 
+        cmd: curl https://dlcdn.apache.org/hadoop/common/hadoop-3.2.3/hadoop-3.2.3.tar.gz --output hadoop-3.2.3.tar.gz
+
+    2- Extract the tar file in the currently directory.
+        cmd: tar -xvf hadoop-3.2.3.tar.gz
+
+    3- Navigate to the hadoop-3.2.3 directory.
+        cmd: cd hadoop-3.2.3
+
+    4- Check the hadoop command to see if it is setup. This will display the usage documentation for the hadoop script.
+        cmd: bin/hadoop
+
+    5- Run the following command to download data.txt to your current directory.
+        cmd: curl https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-BD0225EN-SkillsNetwork/labs/data/data.txt --output data.txt
+
+    6- Run the Map reduce application for wordcount on data.txt and store the output in /user/root/output
+        cmd: bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.3.jar wordcount data.txt output
+
+    7- Once the word count runs successfully, you can run the following command to see the output file it has generated.
+        cmd: ls output 
+
+    8- Run the following command to see the word count output.
+        cmd: cat  output/part-r-00000
+
+
+Hands-on lab on Hadoop Map-Reduce (20 mins):
+
+# What is a Hadoop Cluster?
+
+    A Hadoop cluster is a collection of computers, known as nodes, that are networked together to perform parallel computations on big data sets. The Name node is  the master node of the Hadoop Distributed File System (HDFS). It maintains the meta data of the files in the RAM for quick access. An actual Hadoop Cluster  setup involves extensives resources which are not within the scope of this lab. In this lab, you will use dockerized hadoop to create a Hadoop Cluster which         will have:  
+
+        Namenode
+        Datanode
+        Node Manager
+        Resource manager
+        Hadoop history server
+
+    1- Clone the repository to your theia environment.
+        cmd: git clone https://github.com/ibm-developer-skills-network/ooxwv-docker_hadoop.git
+
+    2- Navigate to the docker-hadoop directory to build it.
+        cmd: cd ooxwv-docker_hadoop
+
+    3- Compose the docker application.
+        cmd: docker-compose up -d
+            # Compose is a tool for defining and running multi-container Docker applications. It uses the YAML file to configure the serives and enables us to create and start all the services from just one configurtation file.
+    4- Run the namenode as a mounted drive on bash.
+        cmd: docker exec -it namenode /bin/bash
+
+    5- You will observe that the prompt changes as shown below.
+        old: theia@theiadocker-vitorbelan:/home/project/ooxwv-docker_hadoop$ 
+        new: root@a888cb13897c:/# 
+
+    
+# Explore the hadoop environment
+    As you have learnt in the videos and reading thus far in the course, a Hadoop environment is configured by editing a set of configuration files:
+
+        hadoop-env.sh:   Serves as a master file to configure YARN, HDFS, MapReduce, and Hadoop-related project settings.
+        core-site.xml:   Defines HDFS and Hadoop core properties
+        hdfs-site.xml:   Governs the location for storing node metadata, fsimage file and log file.
+        mapred-site-xml: Lists the parameters for MapReduce configuration.
+        yarn-site.xml:   Defines settings relevant to YARN. It contains configurations for the Node Manager, Resource Manager, Containers, and Application Master.
+        For the docker image, these xml files have been configured already. You can see these in the directory /opt/hadoop-3.2.1/etc/hadoop/ by running
+            cmd: ls /opt/hadoop-3.2.1/etc/hadoop/*.xml
+
+    Create a file in the HDFS:
+        1- In the HDFS, create a directory structure named user/root/input.
+            cmd: hdfs dfs -mkdir -p /user/root/input
+
+        2- Copy all the hadoop configuration xml files into the input directory.
+            cmd: hdfs dfs -put $HADOOP_HOME/etc/hadoop/*.xml /user/root/input
+
+        3- Create a data.txt file in the current directory.
+            cmd: curl https://raw.githubusercontent.com/ibm-developer-skills-network/ooxwv-docker_hadoop/master/SampleMapReduce.txt --output data.txt 
+
+        4- Copy the data.txt file into /user/root.
+            cmd: hdfs dfs -put data.txt /user/root/
+
+        5- Check if the file has been copied into the HDFS by viewing its content.
+            cmd: hdfs dfs -cat /user/root/data.txt
+
+
