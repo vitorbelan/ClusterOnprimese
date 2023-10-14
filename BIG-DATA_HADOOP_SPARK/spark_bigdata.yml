@@ -1,0 +1,19 @@
+# Introducao ao Haddop
+    Spark:
+    Uma aplicaçao open source baseada em memoria popara processamento de dados distribuido e analises interativas de volumes massivos de dados.
+    Todas operaçoes aconteceme na memória ou RAM
+    eSCRITO PREDOMINANTEMENTE EM SCALA E RODA EM JVMs
+    Distributed computing an Parallel Computig
+    Parallel Computig:
+        Compartilha toda a memoria
+    Distributed computing:
+        Usa somente a memoria dedica ao processador
+        Oferece escalabildiade e crescimento
+7
+
+# Parallel Programming using Resilient Distributed Datasets
+    particoes para um RDD
+        distData = sc.parallelize(data)
+        o spark tenta definir automaticamente o numero de particoes do dataset baseado no tamanho do cluster, mas também pode ser passado como parametro para a funcao de paralelização
+
+
