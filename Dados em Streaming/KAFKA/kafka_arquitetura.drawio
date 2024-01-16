@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-01-16T01:45:03.839Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="_JzSKm6ULF8c6t_bM5-9" version="22.1.16" type="device">
+<mxfile host="Electron" modified="2024-01-16T23:48:19.359Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="L52cRKFishVBBn0kgeSX" version="22.1.16" type="device">
   <diagram name="Page-1" id="RgbWbbCrqY0GIZyTWwe2">
-    <mxGraphModel dx="2131" dy="1929" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2022" dy="1866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -287,7 +287,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4AT3hym7QcRthu2yqRaI-126" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry y="2210" width="830" height="580" as="geometry" />
+          <mxGeometry x="-330" y="2230" width="830" height="580" as="geometry" />
         </mxCell>
         <mxCell id="4AT3hym7QcRthu2yqRaI-115" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="4AT3hym7QcRthu2yqRaI-126" vertex="1">
           <mxGeometry width="830" height="580" as="geometry" />
@@ -489,7 +489,7 @@
           <mxGeometry x="10" y="100" width="270" height="50" as="geometry" />
         </mxCell>
         <mxCell id="1LYFOesdYeyjKUmjPI9d-46" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="780" y="1530" width="630" height="270" as="geometry" />
+          <mxGeometry x="780" y="1540" width="630" height="270" as="geometry" />
         </mxCell>
         <mxCell id="1LYFOesdYeyjKUmjPI9d-47" value="Partition leadership&lt;br&gt;é a orgiem do replacation factor, é onde sempre lerei os arquivos, no caso os arquivos de tons escuros sao os leaderships e os outros são os followers" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;arcSize=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-46">
           <mxGeometry width="630" height="270" as="geometry" />
@@ -529,6 +529,205 @@
         </mxCell>
         <mxCell id="1LYFOesdYeyjKUmjPI9d-60" value="Partition 2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-61">
           <mxGeometry x="25.5" y="34.90000000000009" width="139" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-74" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="780" y="1840" width="630" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-62" value="" style="group" vertex="1" connectable="0" parent="1LYFOesdYeyjKUmjPI9d-74">
+          <mxGeometry width="630" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-63" value="Producer&lt;br&gt;processo padrao de entrega utilizado pelo kafka" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;arcSize=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-62">
+          <mxGeometry width="630" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-67" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Record&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Topic&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-Key&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-value&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-62">
+          <mxGeometry x="10" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-77" value="send()&lt;br&gt;try" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-62">
+          <mxGeometry x="120" y="50" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-68" value="&lt;div style=&quot;text-align: left;&quot;&gt;Serializer&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-74">
+          <mxGeometry x="176.4" y="60" width="100.8" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-69" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1LYFOesdYeyjKUmjPI9d-74" source="1LYFOesdYeyjKUmjPI9d-67" target="1LYFOesdYeyjKUmjPI9d-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-70" value="&lt;div style=&quot;text-align: left;&quot;&gt;Partitioner&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-74">
+          <mxGeometry x="344.4" y="60" width="100.8" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-71" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1LYFOesdYeyjKUmjPI9d-74" source="1LYFOesdYeyjKUmjPI9d-68" target="1LYFOesdYeyjKUmjPI9d-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-72" value="&lt;div style=&quot;text-align: left;&quot;&gt;Broker A&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-74">
+          <mxGeometry x="512.4" y="60" width="100.8" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-73" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1LYFOesdYeyjKUmjPI9d-74" source="1LYFOesdYeyjKUmjPI9d-70" target="1LYFOesdYeyjKUmjPI9d-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-79" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="780" y="2060" width="640" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-81" value="Delivery guarantees (garantias de entrega)" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;arcSize=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry width="630" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-97" value="" style="group" vertex="1" connectable="0" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="20" y="210" width="193.6" height="76.67000000000007" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1LYFOesdYeyjKUmjPI9d-97" source="1LYFOesdYeyjKUmjPI9d-93" target="1LYFOesdYeyjKUmjPI9d-94">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-135" value="Ack1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1LYFOesdYeyjKUmjPI9d-99">
+          <mxGeometry x="-0.4548" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-93" value="&lt;div style=&quot;text-align: left;&quot;&gt;Producer&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-97">
+          <mxGeometry y="30" width="70" height="26.67" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-94" value="&lt;div style=&quot;text-align: left;&quot;&gt;Broker A&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-97">
+          <mxGeometry x="130" width="63.6" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-95" value="&lt;div style=&quot;text-align: left;&quot;&gt;Broker B&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-97">
+          <mxGeometry x="130" y="30" width="63.6" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-96" value="&lt;div style=&quot;text-align: left;&quot;&gt;Broker C&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-97">
+          <mxGeometry x="130" y="56.67000000000007" width="63.6" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-98" value="" style="group" vertex="1" connectable="0" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="20" y="60" width="193.6" height="76.67000000000007" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-82" value="&lt;div style=&quot;text-align: left;&quot;&gt;Producer&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-98">
+          <mxGeometry y="30" width="70" height="26.67" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-88" value="&lt;div style=&quot;text-align: left;&quot;&gt;Broker A&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-98">
+          <mxGeometry x="130" width="63.6" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-91" value="&lt;div style=&quot;text-align: left;&quot;&gt;Broker B&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-98">
+          <mxGeometry x="130" y="30" width="63.6" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-92" value="&lt;div style=&quot;text-align: left;&quot;&gt;Broker C&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-98">
+          <mxGeometry x="130" y="56.67000000000007" width="63.6" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-85" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1LYFOesdYeyjKUmjPI9d-98" source="1LYFOesdYeyjKUmjPI9d-82" target="1LYFOesdYeyjKUmjPI9d-88">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="176.4000000000001" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-134" value="Ack0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1LYFOesdYeyjKUmjPI9d-85">
+          <mxGeometry x="-0.4093" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-126" value="" style="group" vertex="1" connectable="0" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="355" y="50" width="193.6" height="76.67000000000007" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1LYFOesdYeyjKUmjPI9d-126" source="1LYFOesdYeyjKUmjPI9d-128" target="1LYFOesdYeyjKUmjPI9d-129">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-136" value="ack-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1LYFOesdYeyjKUmjPI9d-127">
+          <mxGeometry x="0.026" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-128" value="&lt;div style=&quot;text-align: left;&quot;&gt;Producer&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-126">
+          <mxGeometry y="30" width="70" height="26.67" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1LYFOesdYeyjKUmjPI9d-126" source="1LYFOesdYeyjKUmjPI9d-129" target="1LYFOesdYeyjKUmjPI9d-130">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="205" y="10" />
+              <mxPoint x="205" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1LYFOesdYeyjKUmjPI9d-126" source="1LYFOesdYeyjKUmjPI9d-129" target="1LYFOesdYeyjKUmjPI9d-131">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-129" value="&lt;div style=&quot;text-align: left;&quot;&gt;Broker A&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-126">
+          <mxGeometry x="130" width="63.6" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-130" value="&lt;div style=&quot;text-align: left;&quot;&gt;Broker B&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-126">
+          <mxGeometry x="130" y="30" width="63.6" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-131" value="&lt;div style=&quot;text-align: left;&quot;&gt;Broker C&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-126">
+          <mxGeometry x="130" y="56.67000000000007" width="63.6" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-137" value="Ack 0: o kafka nao vai dar retorno de que a mensagem foi gravada&lt;br&gt;&lt;br&gt;ack 1 assim que o broker que recebeu mensagem ele envia para producer dizendo que recebeu&lt;br&gt;&lt;br&gt;ack -1 mensagem só é enviada depois que o brocker leader recebeu e todos os brokers de acordo com o raplication factor" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="355" y="173.32999999999998" width="255" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-151" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1LYFOesdYeyjKUmjPI9d-79" source="1LYFOesdYeyjKUmjPI9d-138" target="1LYFOesdYeyjKUmjPI9d-148">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-152" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1LYFOesdYeyjKUmjPI9d-79" source="1LYFOesdYeyjKUmjPI9d-138" target="1LYFOesdYeyjKUmjPI9d-149">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-153" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1LYFOesdYeyjKUmjPI9d-79" source="1LYFOesdYeyjKUmjPI9d-138" target="1LYFOesdYeyjKUmjPI9d-150">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-138" value="Kafka process" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="180" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-139" value="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="27" y="500" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-140" value="2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="80" y="500" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-141" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1LYFOesdYeyjKUmjPI9d-79" source="1LYFOesdYeyjKUmjPI9d-139" target="1LYFOesdYeyjKUmjPI9d-140">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-146" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1LYFOesdYeyjKUmjPI9d-79" source="1LYFOesdYeyjKUmjPI9d-143" target="1LYFOesdYeyjKUmjPI9d-138">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-143" value="3" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="130" y="500" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-144" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1LYFOesdYeyjKUmjPI9d-79" source="1LYFOesdYeyjKUmjPI9d-140" target="1LYFOesdYeyjKUmjPI9d-143">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-148" value="At most once: can lose some message, best perfomance" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="341" y="390" width="259" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-149" value="At least once: can duplicate message" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="341" y="480" width="259" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-150" value="Exacly once: worst performance" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="341" y="570" width="259" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-154" value="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="370" y="420" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-155" value="2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="423" y="420" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-158" value="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="371.5" y="510" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-159" value="2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="424.5" y="510" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-160" value="3" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="474.5" y="510" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-208" value="3" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="528.5999999999999" y="510" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-209" value="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="373" y="600" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-210" value="2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="426" y="600" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-211" value="3" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1LYFOesdYeyjKUmjPI9d-79">
+          <mxGeometry x="476" y="600" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-212" value="Idempotent producers&lt;br&gt;Quando tenho um idempotente producers , nao existe possibilidade de escrever mensasgens duplicadas no broker" style="rounded=1;whiteSpace=wrap;html=1;arcSize=4;verticalAlign=top;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1610" y="-40" width="650" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-213" value="Idempotent = off&lt;br&gt;Em caso de falha a mensagem é duplicadamente escrita" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;arcSize=5;" vertex="1" parent="1">
+          <mxGeometry x="1660" y="50" width="400" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="1LYFOesdYeyjKUmjPI9d-214" value="Idempotent = on&lt;br&gt;Em caso de falha a mensagem não é escrita duplicadamente, verificando o ID do producer e o numero da sequencia da mensagem&lt;br&gt;Mennsagem escrita na ordem correta" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;arcSize=5;" vertex="1" parent="1">
+          <mxGeometry x="1660" y="245" width="400" height="115" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
